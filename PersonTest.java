@@ -2,6 +2,8 @@ package record;
 
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.MinimalHTMLWriter;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 
 public class PersonTest {
@@ -32,6 +34,12 @@ public class PersonTest {
         }
         System.out.println("最年長は" + MaxName + "さんで" + Maxage + "歳です。");
         System.out.println("最年少は" + MinName + "さんで" + Minage + "歳です。");
+
+        Arrays.sort(people);
+        System.out.println("並び替えた結果：");
+        for(Person person:people){
+            System.out.println(person.getFullName()+"さんは"+person.getage()+"歳です");
+        }
     }
 }
 
